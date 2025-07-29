@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants, Easing } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot, faCode, faCloud } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: 'easeOut', staggerChildren: 0.2 },
+    transition: { duration: 0.8, ease: 'easeOut' as Easing, staggerChildren: 0.2 },
   },
 };
 
@@ -59,7 +59,7 @@ const Portfolio = () => (
     className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-orange-50 flex flex-col items-center py-16 px-4"
     initial="hidden"
     animate="visible"
-    variants={containerVariants}
+    variants={containerVariants as Variants}
   >
     <div className="max-w-7xl w-full text-center">
       <motion.h1
@@ -77,7 +77,7 @@ const Portfolio = () => (
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        variants={containerVariants}
+        variants={containerVariants as Variants}
       >
         {projects.map((project, idx) => (
           <motion.div
