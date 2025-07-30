@@ -54,22 +54,16 @@ const steps = [
 
 const testimonials = [
   {
-    name: 'Amit Sharma',
-    role: 'CTO, TechNova',
+    name: 'Yogesh Chauhan',
+    role: 'Founder and CEO',
     text: 'Innosanskriti Labs delivered our AI project on time with amazing quality. Highly recommended!',
     img: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
-    name: 'Priya Verma',
-    role: 'Product Manager, FinEdge',
+    name: 'Deepak Kumar',
+    role: 'Co-Founder',
     text: 'Their DevOps automation suite transformed our deployment process. Great team!',
     img: 'https://randomuser.me/api/portraits/women/44.jpg',
-  },
-  {
-    name: 'Rahul Mehra',
-    role: 'Founder, EduSpark',
-    text: 'The chatbot platform is super easy to use and our customers love it.',
-    img: 'https://randomuser.me/api/portraits/men/65.jpg',
   },
 ];
 

@@ -10,9 +10,11 @@ app = Flask(__name__)
 CORS(app, origins=["https://innosanskriti-frontend.onrender.com"])
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
-
-db = client["innosanskriti"]  # replace with your DB name
+db = client["innosanskriti"]  
 services = db["services"]
+
+
+
 init_db()
 @app.route("/api/services", methods=["GET"])
 def get_services():
