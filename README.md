@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# innosanskriti_pvt_ltd
-this is new startup for services base company
-=======
+
 # Innosanskriti Labs
 
 Innosanskriti Labs Pvt. Ltd. is a modern services-based startup blending cutting-edge technology with Indian values. This repository contains both the frontend (React + Tailwind CSS) and backend (Flask + MongoDB) code for the company website and service platform.
