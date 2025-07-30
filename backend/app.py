@@ -3,14 +3,17 @@ from flask_cors import CORS
 from models.services import get_db, init_db
 import os
 from dotenv import load_dotenv
+from pymongo import MongoClient
 
 load_dotenv()
 app = Flask(__name__)
 CORS(app, origins=["https://innosanskriti-frontend.onrender.com"])
+MONGO_URI = os.getenv("MONGO_URI")
+client = MongoClient(MONGO_URI)
 
-# Initialize DB with sample data
+db = client["innosanskriti"]  # replace with your DB name
+services = db["services"]
 init_db()
-
 @app.route("/api/services", methods=["GET"])
 def get_services():
     db = get_db()
