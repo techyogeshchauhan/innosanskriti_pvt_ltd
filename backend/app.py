@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://innosanskriti-frontend.onrender.com"])
 
 # Initialize DB with sample data
 init_db()
@@ -29,4 +29,5 @@ def contact():
     return jsonify({"message": "Contact form submitted!"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=True)
+    # app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=True)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))

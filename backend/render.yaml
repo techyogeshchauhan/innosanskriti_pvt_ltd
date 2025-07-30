@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: innosanskriti-backend
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: MONGO_URI
+        value: <your-mongo-uri>
+    rootDir: backend
+
+  - type: static
+    name: innosanskriti-frontend
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: dist
+    rootDir: frontend
